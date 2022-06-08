@@ -25,8 +25,8 @@ public class switchProject {
 
 		// Input the operation which should be executed
 
-		System.out.println("Enter the operation which should be executed."
-				+ " Please use - \n 1:Add \n 2:Subtract \n 3: Multiply \n4 Divide");
+		System.out.println("Enter the correspodning number of the operation which should be executed."
+				+ " Please use - \n 1 - Add \n 2 - Subtract \n 3 - Multiply \n 4 - Divide");
 		Scanner op = new Scanner(System.in);
 		int operator = op.nextInt();
 
