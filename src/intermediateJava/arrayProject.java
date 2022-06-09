@@ -21,7 +21,7 @@ public class arrayProject {
 		String[] samsungArray = { "S20", "S21", "Flip 3", "Fold 3" };
 
 		// Switch
-
+		boolean rightProduct = false;
 		switch (brandName) {
 
 		// Apple
@@ -37,12 +37,22 @@ public class arrayProject {
 
 			for (int i = 0; i < 4; i++) {
 
-				System.out.println(appleArray[i]);
+//			
 				if (appleArray[i].equals(appleProd)) {
 					System.out.println("You have selected " + appleProd);
+					rightProduct = true;
 					break;
 				}
+
 			}
+
+			if (rightProduct == false) {
+				System.out.println("Enter product from the list");
+				break;
+			}
+
+			break;
+
 		}
 
 		// Google
@@ -58,13 +68,21 @@ public class arrayProject {
 
 			for (int i = 0; i < 4; i++) {
 
-				System.out.println(googleArray[i]);
 				if (googleArray[i].equals(googleProd)) {
 					System.out.println("You have selected " + googleProd);
+					rightProduct = true;
 					break;
 
 				}
+
 			}
+
+			if (rightProduct == false) {
+				System.out.println("Enter product from the list");
+				break;
+			}
+
+			break;
 		}
 
 		// Samsung
@@ -80,17 +98,24 @@ public class arrayProject {
 
 			for (int i = 0; i < 4; i++) {
 
-				System.out.println(samsungArray[i]);
 				if (samsungArray[i].equals(samsungProd)) {
 					System.out.println("You have selected " + samsungProd);
+					rightProduct = true;
 					break;
 
 				}
+
 			}
+
+			if (rightProduct == false) {
+				System.out.println("Enter product from the list");
+				break;
+			}
+			break;
 		}
 
 		default:
-			System.out.println("Please select a product from the list");
+			System.out.println("Enter a valid Brand name");
 			break;
 
 		}

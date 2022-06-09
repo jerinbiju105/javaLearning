@@ -18,10 +18,10 @@ public class switchProject {
 		double firstNumber = sc.nextDouble();
 
 		// Input second number
-
+		// Use one scanner variable for both inputs  !!!!
 		System.out.println("Now, enter second digit!");
 		Scanner sn = new Scanner(System.in);
-		double secondNumber = sc.nextDouble();
+		double secondNumber = sn.nextDouble();
 
 		// Input the operation which should be executed
 
