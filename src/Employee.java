@@ -1,17 +1,39 @@
-package MethodsAndClasses;
+package Classwork;
 
 public class Employee {
+
 	
-	String firstName;
-	String lastName;
-	double hourlyPay;
-	double hoursWorked;
+private int sinNumber ;
 	
+	private double salary;
 	
-	double calculateSalary (double hour) {
-//		hour = hoursWorked;
-		return(hourlyPay*hour);
+
+	public double getSalary() {
+		return salary;
 	}
 
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
 
+	public Employee(int sinNumber) {
+		this.sinNumber = sinNumber;
+	}
+
+	public int getSinNumber() {
+		return sinNumber;
+	}
+	
+	//Change to public void setSinNumber(int sinNumber, CRA cra, int pin)
+
+	public void setSinNumber(int sinNumber, Cra cra, int pin) {
+		
+		if(cra.craAuthorized && sinNumber != 0 && pin ==1234) {
+			this.sinNumber = sinNumber;
+		}else {
+			System.out.println("You don't have authority to change Sin number ");
+		}
+		
+	}
+	
 }
