@@ -1,39 +1,53 @@
-package Classwork;
+package EncapsulationInhertance;
 
 public class Employee {
 
-	
-private int sinNumber ;
-	
-	private double salary;
-	
+	private String firstName;
+	private String lastName;
+	private Double sinNumber;
+	private Double salary;
 
-	public double getSalary() {
-		return salary;
+	public Employee() {
+
 	}
 
-	public void setSalary(double salary) {
+	public Employee(String firstName, String lastName, Double sinNumber, Double salary) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.sinNumber = sinNumber;
 		this.salary = salary;
 	}
 
-	public Employee(int sinNumber) {
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public Double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(Double salary) {
+		this.salary = salary;
+	}
+
+	public Double getSinNumber() {
+		return sinNumber;
+	}
+
+	public void setSinNumber(Double sinNumber) {
 		this.sinNumber = sinNumber;
 	}
 
-	public int getSinNumber() {
-		return sinNumber;
-	}
-	
-	//Change to public void setSinNumber(int sinNumber, CRA cra, int pin)
-
-	public void setSinNumber(int sinNumber, Cra cra, int pin) {
-		
-		if(cra.craAuthorized && sinNumber != 0 && pin ==1234) {
-			this.sinNumber = sinNumber;
-		}else {
-			System.out.println("You don't have authority to change Sin number ");
-		}
-		
-	}
-	
 }
